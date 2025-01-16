@@ -25,7 +25,11 @@
 ## 사용 방법
 1. 애플리케이션을 실행합니다.
    ```bash
-   streamlit run app.py
+   streamlit run prompt_flow.py
+   ```
+
+   ```bash
+   streamlit run prompt_example_main.py
    ```
 2. 로그인 정보를 입력합니다.
 3. 프롬프트를 작성하고 `{}`를 사용하여 입력을 추가합니다.
@@ -52,6 +56,10 @@
    git push origin feature/YourFeature
    ```
 5. Pull Request를 생성합니다.
+
+# 화면
+
+![](./static/image.png)
 
 ## 라이센스
 이 프로젝트는 MIT 라이센스 하에 배포됩니다.
