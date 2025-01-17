@@ -23,6 +23,8 @@ My Prompt Template is
 '''
 {prompt_template}
 '''
+
+답변은 한국어로 작성해주세요.
 """
 
 import zipfile  # zipfile 모듈 추가
@@ -57,7 +59,8 @@ def prompt_template_view(key="general"):
         if on_local:
             file_list = [i.name for i in Path("./template").glob("*.json")]
             file_name = st.selectbox("파일 선택", file_list, index=None, key=f"prompt_app_file_name_{key}")
-            if file_name is None:
+            if len(file_list) == 0:
+                st.error("파일이 없습니다.")
                 st.stop()
             prompt_template = load_prompt_template_local(file_name)
             prompt_string = prompt_template.dict()["template"]
