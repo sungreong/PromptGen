@@ -284,7 +284,7 @@ def load_users():
             "users": [
                 {
                     "username": os.getenv('user_name', 'admin'),
-                    "password": os.getenv('password', 'agilesoda$01'),
+                    "password": os.getenv('password', 'admin$01'),
                     "role": "admin"
                 }
             ]
